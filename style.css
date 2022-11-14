@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root{
+--Red: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+--White: hsl(0, 0%, 100%);
+--Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-grayish-blue-1: hsl(211, 68%, 94%);
+--Light-grayish-blue-2: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/*Container properties*/
+.container{
+    width: 80%;
+    padding: 3%;
+    margin-bottom: 10px;
+}
+.container > .box:nth-child(-n+4){
+    background-color:  hsl(205, 33%, 90%);
+}
+/*Header properties*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0%;
+}
+.header p{
+    color: hsl(219, 12%, 42%);
+}
+#number-of-notifications{
+    background-color: var(--Blue) ;
+    color: white;
+    border-radius: 8px;
+    display: inline block;
+    margin-left: 3% ;
+    padding: 3% 8%;
+}
+/*Boxes properties*/
+.box{
+    color: hsl(219, 12%, 42%);
+    display: flex;
+    margin-top: 0.9%;
+    padding: 1%;
+    border-radius: 7px;
+}
+.box p{
+    margin-right: 7px;
+}
+.box .name{
+    color: black;
+}
+/*Active state*/
+.name:hover{cursor: pointer;
+color: var(--Blue);
+}
+.chess-club:hover{cursor:pointer;}
+#message:hover{
+    background-color: hsl(205, 33%, 90%);
+    cursor: pointer;
+}
+#my-first:hover{
+    color:  hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+/*End of active state*/
+.box img{
+    height: 40px;
+    margin-right: 1%;
+}
+.chess-club{
+    color: hsl(219, 85%, 26%);
+    font-weight: bold;
+}
+#img-chess{
+    justify-self: flex-end;
+    margin-left: 61%;
+}
+
+#message{
+        color: hsl(219, 12%, 42%);
+        border: 1px solid hsl(219, 12%, 42%);
+        margin: 1% 0% 1% 5%;
+        padding: 2%;
+}
+.dot{
+    background-color: var(--Red);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(0px, 6px);
+}
+/*Media query*/
+@media (max-width: 800px){
+    .box{
+        margin-top: 5%;
+        padding: 3%;
+    }
+    .box .dot{
+        transform: translate(0px, 0px);
+    }
+    .box p{
+        margin-right: 1px;
+    }
+    #img-chess{
+        margin-left: 10%;
+    }
+}
+/*Footer properties*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
